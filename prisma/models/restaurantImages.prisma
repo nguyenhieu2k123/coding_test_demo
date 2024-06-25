@@ -1,0 +1,6 @@
+model Image {
+  id           String      @id @default(uuid())
+  url          String
+  restaurant   Restaurant  @relation(fields: [restaurant_id], references: [id])
+  restaurant_id String
+}

@@ -1,0 +1,63 @@
+
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["multiSchema"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+enum STORE_CATEGORY {
+  SUSHI
+  UNAGI
+  TEMPURA
+  TONKATSU
+  YAKITORI
+  SUKIYAKI
+  SOBA
+  RAMEN
+  YAKISOBA
+  OKONOMIYAKI
+  DONBURI
+  ODEN
+  KAISEKI
+  HAMBAGU
+  TEPPANYAKI
+  CURRY
+  YAKINIKU
+  NABE
+  CAFE
+  IZAKAYA
+  OTHER
+}
+
+
+model Restaurant {
+  id          String      @id @default(uuid())
+  name        String
+  rating      Float
+  rating_count Int
+  category    STORE_CATEGORY
+  city        String
+  description String
+  price_range  String
+  featured    Featured?
+  images      Image[]
+  is_favorite  Boolean
+}
+model Featured {
+  id           String      @id @default(uuid())
+  text         String
+  icon         String
+  restaurant   Restaurant  @relation(fields: [restaurant_id], references: [id])
+  restaurant_id String @unique
+}
+
+
+model Image {
+  id           String      @id @default(uuid())
+  url          String
+  restaurant   Restaurant  @relation(fields: [restaurant_id], references: [id])
+  restaurant_id String
+}

@@ -1,0 +1,14 @@
+
+model Restaurant {
+  id          String      @id @default(uuid())
+  name        String
+  rating      Float
+  rating_count Int
+  category    STORE_CATEGORY
+  city        String
+  description String
+  price_range  String
+  featured    Featured?
+  images      Image[]
+  is_favorite  Boolean
+}

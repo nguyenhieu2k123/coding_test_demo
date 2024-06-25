@@ -1,0 +1,8 @@
+model Featured {
+  id           String      @id @default(uuid())
+  text         String
+  icon         String
+  restaurant   Restaurant  @relation(fields: [restaurant_id], references: [id])
+  restaurant_id String @unique
+}
+

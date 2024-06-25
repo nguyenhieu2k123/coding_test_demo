@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--gray-dark-color:: #344054;
+  --gray-light-color: #475467;
+	--hight-light-text-color: #FF692E;
+}
+
+.custom-dots .slick-dots li,
+.custom-dots .slick-dots li.slick-active button {
+  width: 8px!important;
+  height: 8px;
+  border-radius: 50%;
+}
+.custom-dots .slick-dots li button {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
