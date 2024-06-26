@@ -4,7 +4,6 @@
 	"private": true,
 	"type": "module",
 	"scripts": {
-		"prebuild": "npx prisma migrate --name init && npm run seed:all",
 		"build": "next build",
 		"build:schema": "ts-node-esm src/build-schema.ts",
 		"seed:all": "ts-node-esm src/seed.ts",
