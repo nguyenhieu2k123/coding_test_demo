@@ -4,6 +4,7 @@ DROP TYPE IF EXISTS "STORE_CATEGORY";
 CREATE TYPE "STORE_CATEGORY" AS ENUM ('SUSHI', 'UNAGI', 'TEMPURA', 'TONKATSU', 'YAKITORI', 'SUKIYAKI', 'SOBA', 'RAMEN', 'YAKISOBA', 'OKONOMIYAKI', 'DONBURI', 'ODEN', 'KAISEKI', 'HAMBAGU', 'TEPPANYAKI', 'CURRY', 'YAKINIKU', 'NABE', 'CAFE', 'IZAKAYA', 'OTHER');
 
 -- CreateTable
+DROP TABLE IF EXISTS "Restaurant";
 CREATE TABLE "Restaurant" (
     "id" TEXT NOT NULL,
     "name" TEXT NOT NULL,
@@ -19,6 +20,7 @@ CREATE TABLE "Restaurant" (
 );
 
 -- CreateTable
+DROP TABLE IF EXISTS "Featured";
 CREATE TABLE "Featured" (
     "id" TEXT NOT NULL,
     "text" TEXT NOT NULL,
@@ -29,6 +31,7 @@ CREATE TABLE "Featured" (
 );
 
 -- CreateTable
+DROP TABLE IF EXISTS "Image";
 CREATE TABLE "Image" (
     "id" TEXT NOT NULL,
     "url" TEXT NOT NULL,
