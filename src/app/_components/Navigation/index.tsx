@@ -1,11 +1,11 @@
 import React from 'react';
 import { Col, Row } from 'antd';
 import Link from 'next/link';
-import HomeIcon from '@/app/assets/icon/home-icon.svg';
-import CalendarIcon from '@/app/assets/icon/calendar-icon.svg';
-import MessageIcon from '@/app/assets/icon/message-icon.svg';
-import SearchIcon from '@/app/assets/icon/search-icon-nav.svg';
-import HamburgerIcon from '@/app/assets/icon/hamburger-icon.svg';
+import HomeIcon from 'public/assets/icon/home-icon.svg';
+import CalendarIcon from 'public/assets/icon/calendar-icon.svg';
+import MessageIcon from 'public/assets/icon/message-icon.svg';
+import SearchIcon from 'public/assets/icon/search-icon-nav.svg';
+import HamburgerIcon from 'public/assets/icon/hamburger-icon.svg';
 
 type Props = {
 	children?: React.ReactNode,
