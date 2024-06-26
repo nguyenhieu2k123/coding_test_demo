@@ -4,7 +4,7 @@
 	"private": true,
 	"type": "module",
 	"scripts": {
-		"build": "npx prisma migrate && npm run seed:all && next build",
+		"build": "next build",
 		"build:schema": "ts-node-esm src/build-schema.ts",
 		"seed:all": "ts-node-esm src/seed.ts",
 		"prisma:generate": "npm run build:schema",
