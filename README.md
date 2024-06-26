@@ -27,7 +27,6 @@ NODE_ENV=development
 DATABASE_URL="postgresql://username:password@localhost:5432/coding_test"
 ```
 
-
 * Run npm i
 * Run npx prisma generate
 * Run npx prisma migrate dev --name init
